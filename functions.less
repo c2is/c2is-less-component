@@ -1,7 +1,7 @@
 ._opacity(@opacity:1) {
     @opacityPercentage: @opacity * 100;
     opacity: @opacity;
-    filter: ~"alpha(opacity = (@{opacityPercentage}))"; // IE 6 & 7
+    filter: ~"alpha(opacity = @{opacityPercentage})"; // IE 6 & 7
     -ms-filter:~"progid:DXImageTransform.Microsoft.Alpha(Opacity=@{opacityPercentage})"; // IE 8+
 }
 
