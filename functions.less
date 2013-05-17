@@ -1,7 +1,7 @@
 ._opacity(@opacity:1) {
     @opacityPercentage: @opacity * 100;
     opacity: @opacity;
-    filter: ~"alpha(opacity = @{opacityPercentage})"; // IE 6 & 7
+    filter: ~"alpha(opacity=@{opacityPercentage})"; // IE 6 & 7
     -ms-filter:~"progid:DXImageTransform.Microsoft.Alpha(Opacity=@{opacityPercentage})"; // IE 8+
 }
 
@@ -30,10 +30,8 @@
     -webkit-box-shadow: @shadow ;
     box-shadow: @shadow;
 }
-._text-shadow(@blur:10px, @horz:0px, @vert:0px, @rgba:rgba(0,0,0,0.7), @offx:0, @offy:0, @hex:#666) {
+._text-shadow(@horz:0px,@vert:0px,@blur:3px,@rgba:rgba(0,0,0,0.7)) {
     text-shadow: @horz @vert @blur @rgba;
-//filter: glow(color=@hex,strength=@blur);
-//filter: dropshadow(color=@hex, offx=@offx, offy=@offy);
 }
 ._transform(@transform) {
     -webkit-transform:@transform;
